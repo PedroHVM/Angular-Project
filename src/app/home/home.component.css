@@ -1,0 +1,29 @@
+header {
+    background-color: black;
+    color: white;
+
+    a{
+        color: white;
+        text-decoration: none;
+        
+    }
+}
+
+.headerInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding: 10px 0px; /* Ajuste conforme necessário */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+nav {
+    display: flex;
+}
+
+nav button {
+    margin-left: 10px;
+}

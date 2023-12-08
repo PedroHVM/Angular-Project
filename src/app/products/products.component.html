@@ -1,0 +1,11 @@
+<main>
+<div class="ContainerProduct" *ngFor="let product of products" >
+    <h3>{{ product.title }}</h3>
+    <p>{{ product.description | truncateDescription: 50 }}</p>
+    <h2>{{ product.price | priceFormat }}</h2>
+    
+    <img [src]="product.image" alt="Product Image" />
+    <button (click)="goToProductDetail(product.id)">Comprar</button>
+  </div>
+  
+</main>

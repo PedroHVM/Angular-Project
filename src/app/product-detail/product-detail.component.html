@@ -1,0 +1,10 @@
+<main>
+<div *ngIf="product">
+    <h2>{{ product.title }}</h2>
+    <p>{{ product.description }}</p>
+    <p>Price: {{ product.price | priceFormat }}</p>
+    <p>Category: {{product.category}}</p>
+    <!-- Adicione mais campos conforme necessário -->
+    <img [src]="product.image" alt="Product Image" />
+  </div>
+</main>
