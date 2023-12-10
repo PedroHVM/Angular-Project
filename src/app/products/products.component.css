@@ -43,7 +43,7 @@ main {
 
   > img {
     width: 100%;
-    max-width:100%;
+    max-width: 100%;
     height: 300px;
     object-fit: contain;
     padding: 10px;
@@ -51,34 +51,33 @@ main {
     border: 1px solid #efefef;
     border-radius: 30px;
   }
-
 }
 
 .descriptionOfProduct {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
 }
 
 .category {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-top: auto;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: auto;
+  align-items: center;
+  width: 100%;
 
-    > span {
-        color: var(--disabled-element-text-color, #8EC2F2);
-        cursor: pointer;
-        font-family: Montserrat;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 24px; /* 171.429% */
-        letter-spacing: 0.2px;
-    }
+  > span {
+    color: var(--disabled-element-text-color, #8ec2f2);
+    cursor: pointer;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.2px;
+  }
 }
 
 .ContainerProduct:hover {
@@ -151,7 +150,6 @@ nav button:hover {
   }
 
   .filter-dropdown:hover .dropdown-content {
-
     display: flex;
     flex-direction: column;
     gap: 10px;
