@@ -4,20 +4,20 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 100px;
-  height: 420px;
+  height: 300px;
   box-shadow: 0 10px 10px #ccc;
   transition: all 0.3s ease-in-out;
   background-color: #2A7CC7;
   color: #fff;
   margin-top: 100px ;    
-
+    width: 100%;
 }
 
 main {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    padding: 10px 20px;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -41,3 +41,16 @@ div {
         letter-spacing: 0.2px;
     }
   }
+
+  @media (max-width: 768px) {
+    footer {
+        height: 100%;
+    }
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px 20px
+    }
+
+}

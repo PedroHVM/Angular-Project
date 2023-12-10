@@ -11,6 +11,7 @@ export class ProductsComponent implements OnInit {
   products: any[] = [];
   filteredProducts: any[] = [];
   selectedCategory: string = '';
+  isFilterDropdownOpen: boolean = false; 
 
   constructor(private productService: ProductService, private router: Router) {}
 
@@ -21,7 +22,7 @@ export class ProductsComponent implements OnInit {
   loadAllProducts() {
     this.productService.getProducts().subscribe((data) => {
       this.products = data;
-      this.filterProducts(''); // Carrega todos os produtos inicialmente
+      this.filterProducts('');
     });
   }
 
@@ -33,9 +34,13 @@ export class ProductsComponent implements OnInit {
     this.selectedCategory = category;
 
     if (category === '') {
-      this.filteredProducts = [...this.products]; // Mostra todos os produtos se a categoria for vazia
+      this.filteredProducts = [...this.products];
     } else {
       this.filteredProducts = this.products.filter(product => product.category === category);
     }
+  }
+
+  toggleFilterDropdown() {
+    this.isFilterDropdownOpen = !this.isFilterDropdownOpen;
   }
 }

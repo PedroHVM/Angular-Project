@@ -9,18 +9,17 @@ header {
 }
 
 .headerInfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0px;
-    max-width: 1200px;
-    height: 76px;
-    margin: 0 auto;
-  }
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  max-width: 1200px;
+  height: 76px;
+  margin: 0 auto;
+  width: 100%;
+}
 main {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
@@ -35,8 +34,7 @@ main {
   justify-content: space-between;
   padding: 20px;
   height: 550px;
-
-  max-width: 1200px;
+  width: 350px;
   gap: 10px;
   box-shadow: 0 10px 10px #ccc;
   border-radius: 15px;
@@ -73,30 +71,66 @@ button:hover {
 }
 
 nav {
+  display: flex;
+  gap: 25px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav span,
+nav button {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  color: #888;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+nav button {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+nav span:hover,
+nav button:hover {
+  color: #fff;
+}
+
+.filter-dropdown {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .filter-options {
+    display: none;
+  }
+
+  .filter-dropdown {
+    display: block;
+  }
+
+  .filter-dropdown .dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .filter-dropdown:hover .dropdown-content {
+
     display: flex;
-    gap: 25px;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    right: 5px;
+    padding: 10px;
   }
-  
-  nav span,
-  nav button {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: bold;
-    color: #888;
-    margin: 0 10px;
-    cursor: pointer;
+
+  .filter-dropdown button {
+    display: block;
+    width: 100%;
+    text-align: left;
   }
-  
-  nav button {
-    border: none;
-    background: transparent;
-    padding: 0;
-  }
-  
-  nav span:hover,
-  nav button:hover {
-    color: #fff;
-  }
-  
+}

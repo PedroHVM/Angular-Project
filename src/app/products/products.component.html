@@ -1,15 +1,30 @@
-<header>
+ <header>
   <div class="headerInfo">
-    <h1><a href="/">FashionFusion</a></h1>
+    <h1><a href="/">Fashion</a></h1>
     <nav>
-      <button (click)="filterProducts('')">All products</button>
-      <button (click)="filterProducts('men\'s clothing')">men's clothing</button>
-      <button (click)="filterProducts('women\'s clothing')">women's clothing</button>
-      <button (click)="filterProducts('electronics')">Eletronics</button>
-      <button (click)="filterProducts('jewelery')">jewelery</button>
+      <div class="filter-options">
+        <button (click)="filterProducts('')">All products</button>
+        <button (click)="filterProducts('men\'s clothing')">Men's clothing</button>
+        <button (click)="filterProducts('women\'s clothing')">Women's clothing</button>
+        <button (click)="filterProducts('electronics')">Electronics</button>
+        <button (click)="filterProducts('jewelery')">Jewelry</button>
+      </div>
+      <div class="filter-dropdown" [class.open]="isFilterDropdownOpen">
+        <button (click)="toggleFilterDropdown()">Filter</button>
+        <div class="dropdown-content">
+          <button (click)="filterProducts('')">All products</button>
+          <button (click)="filterProducts('men\'s clothing')">Men's clothing</button>
+          <button (click)="filterProducts('women\'s clothing')">Women's clothing</button>
+          <button (click)="filterProducts('electronics')">Electronics</button>
+          <button (click)="filterProducts('jewelery')">Jewelry</button>
+        </div>
+      </div>
     </nav>
   </div>
 </header>
+
+
+
 
 <main>
   <div class="ContainerProduct" *ngFor="let product of filteredProducts" >
