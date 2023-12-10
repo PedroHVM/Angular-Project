@@ -27,7 +27,7 @@
 
 
 <main>
-  <div class="ContainerProduct" *ngFor="let product of filteredProducts" (click)="goToProductDetail(product.id)">
+  <div class="ContainerProduct" *ngFor="let product of pagedProducts | paginate: { itemsPerPage: 6, currentPage: p }" (click)="goToProductDetail(product.id)">
     <img [src]="product.image" alt="Product Image" />
     <div class="descriptionOfProduct">
     <h3>{{ product.title }}</h3>
@@ -38,5 +38,10 @@
     <span>{{product.category}}</span>
   </div>
   </div>
+
   
+
 </main>
+<div class="paginationMenu">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
