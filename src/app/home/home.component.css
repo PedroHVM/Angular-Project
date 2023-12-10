@@ -1,29 +1,48 @@
 header {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 
-    a{
-        color: white;
-        text-decoration: none;
-        
-    }
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .headerInfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    padding: 10px 0px; /* Ajuste conforme necessário */
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding: 10px 0px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-
 nav {
-    display: flex;
+  display: flex;
+  gap: 25px;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 10px 0;
+}
+
+nav span,
+nav button {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  color: #888;
+  margin: 0 10px;
+  cursor: pointer;
 }
 
 nav button {
-    margin-left: 10px;
+  border: none;
+  background: transparent;
+}
+
+nav span:hover,
+nav button:hover {
+  color: #fff;
 }
