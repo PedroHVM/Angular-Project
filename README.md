@@ -1,27 +1,61 @@
-# ApiProject
+# FashionStore E-commerce
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+## Descrição do Projeto
 
-## Development server
+Este é um projeto de e-commerce para uma loja de roupas chamada FashionStore. Ele foi desenvolvido para oferecer uma experiência de compra fácil e intuitiva para os clientes, fornecendo um catálogo de produtos e opções de filtragem por gênero e categorias como eletrônicos e joias.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Funcionalidades
 
-## Code scaffolding
+- **Catálogo de Produtos:** Apresenta uma variedade de produtos, incluindo roupas, eletrônicos e joias.
+- **Filtro por Gênero:** Os clientes podem filtrar os produtos por gênero, como masculino e feminino.
+- **Filtro por Categorias:** Opções de filtragem por categorias específicas, como eletrônicos e joias.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Recursos
 
-## Build
+O projeto conta com:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Página de Catálogo:** Exibe todos os produtos disponíveis para compra.
+- **Opções de Filtro:** Permite aos usuários filtrar os produtos por gênero e categoria.
+- **Página de Detalhes do Produto:** Fornece informações detalhadas sobre um produto específico ao ser selecionado na página do catálogo.
 
-## Running unit tests
+## Tecnologias Utilizadas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Angular: Utilizado para o desenvolvimento do front-end da aplicação.
+- TypeScript: Linguagem utilizada para desenvolvimento.
+- HTML e CSS: Utilizados para a estrutura, estilo e interatividade do site.
 
-## Running end-to-end tests
+## Pré-requisitos
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Certifique-se de ter as seguintes ferramentas instaladas em seu sistema:
 
-## Further help
+- [Node.js](https://nodejs.org/) (versão 12 ou superior)
+- [npm](https://www.npmjs.com/) (normalmente instalado automaticamente com o Node.js)
+- [Angular CLI](https://cli.angular.io/) (instalado globalmente usando npm install -g @angular/cli)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Instalação
+
+1. Clone este repositório para o seu sistema local.
+
+    bash
+    git clone https://github.com/seu-usuario/seu-projeto-angular.git
+    
+
+2. Navegue até o diretório do projeto.
+
+    bash
+    cd seu-projeto-angular
+    
+
+3. Instale as dependências do projeto.
+
+    bash
+    npm install
+    
+
+## Executando o Projeto
+
+Após a instalação, você pode iniciar o servidor de desenvolvimento usando o Angular CLI. Execute o seguinte comando:
+
+```bash
+ng serve
+
