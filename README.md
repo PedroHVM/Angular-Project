@@ -1,8 +1,10 @@
-# FashionStore E-commerce
-
-## Descrição do Projeto
+# FashionStore E-commerce 🛍️👚
 
 Este é um projeto de e-commerce para uma loja de roupas chamada FashionStore. Ele foi desenvolvido para oferecer uma experiência de compra fácil e intuitiva para os clientes, fornecendo um catálogo de produtos e opções de filtragem por gênero e categorias como eletrônicos e joias.
+
+
+https://github.com/PedroHVM/Angular-Project/assets/104960654/56557cba-319e-4939-be0f-e87dafbc197c
+
 
 ## Funcionalidades
 
