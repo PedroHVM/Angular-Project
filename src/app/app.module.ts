@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PriceFormatPipe } from './price-format.pipe';
 import { TruncateDescriptionPipe } from './truncate-description.pipe';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,13 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ProductsComponent,
     PriceFormatPipe,
     TruncateDescriptionPipe,
-    ProductDetailComponent
+    ProductDetailComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
