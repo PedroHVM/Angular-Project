@@ -1,5 +1,166 @@
+header {
+    background-color: black;
+    color: white;
+    margin-bottom: 40px;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  
+  .headerInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    max-width: 1200px;
+    height: 76px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    font-size: 16px;
+    font-weight: bold;
+
+  }
+
+  button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+  }
+  
+  
+  .filter-dropdown {
+    display: none;
+  }
+  
+
+  
+
 main {
     display: flex;
     max-width: 1200px;
-    
+    padding: 50px 0px;
+}  
+
+.containerProduct {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+  padding-top: 20px;
+
+  > div > img{
+    width: 500px;
+    height: 700px;
+    object-fit: contain;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #efefef;
+    border-radius: 30px;
+  
+  }
+
 }
+
+.ContainerInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+  height: 90%;
+  width: 100%;
+
+  > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+
+    > h1 {
+      font-size: 30px;
+      font-weight: 400;
+    }
+  
+  }
+}
+
+.conteinePrice {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .filter-options {
+      display: none;
+    }
+  
+    .filter-dropdown {
+      display: block;
+    }
+  
+    .filter-dropdown .dropdown-content {
+      display: none;
+      background-color: #f9f9f9;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+  
+    .filter-dropdown:hover .dropdown-content {
+  
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      right: 5px;
+      padding: 10px;
+    }
+  
+    .filter-dropdown button {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+
+    .containerProduct {
+      flex-direction: column;
+      padding: 10px;
+      > div > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 10px 10px;
+        margin-bottom: 10px;
+        border: 1px solid #efefef;
+        border-radius: 30px;
+      }
+    }
+
+    .conteinePrice{
+      margin-top: 30px;
+    }
+
+    main {
+      padding: 0px;
+    }
+  }

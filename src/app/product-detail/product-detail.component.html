@@ -1,10 +1,24 @@
-<main>
-<div *ngIf="product">
-    <h2>{{ product.title }}</h2>
-    <p>{{ product.description }}</p>
-    <p>Price: {{ product.price | priceFormat }}</p>
-    <p>Category: {{product.category}}</p>
-    <!-- Adicione mais campos conforme necessário -->
-    <img [src]="product.image" alt="Product Image" />
+<header>
+  <div class="headerInfo">
+    <h1><a href="/">Fashion</a></h1>
+    <button (click)="goBack()">Back</button>
+  </div>
+</header>
+
+<main> 
+  <div *ngIf="product" class="containerProduct">
+    <div>
+      <img [src]="product.image" alt="Product Image" />
+    </div>
+    <div class="ContainerInfo">
+    <div>
+      <h2>{{ product.title }}</h2>
+      <p>{{ product.description }}</p>
+    </div>
+    <div class="conteinePrice">
+      <h2>{{ product.price | priceFormat }}</h2>
+      <span>{{product.category}}</span>
+    </div>
+  </div>
   </div>
 </main>

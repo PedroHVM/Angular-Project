@@ -19,7 +19,7 @@ import { FooterComponent } from './footer/footer.component';
     PriceFormatPipe,
     TruncateDescriptionPipe,
     ProductDetailComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

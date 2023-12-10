@@ -27,13 +27,16 @@
 
 
 <main>
-  <div class="ContainerProduct" *ngFor="let product of filteredProducts" >
+  <div class="ContainerProduct" *ngFor="let product of filteredProducts" (click)="goToProductDetail(product.id)">
+    <img [src]="product.image" alt="Product Image" />
+    <div class="descriptionOfProduct">
     <h3>{{ product.title }}</h3>
     <p>{{ product.description | truncateDescription: 50 }}</p>
     <h2>{{ product.price | priceFormat }}</h2>
-    
-    <img [src]="product.image" alt="Product Image" />
-    <button (click)="goToProductDetail(product.id)">Comprar</button>
+  </div>
+  <div class="category">
+    <span>{{product.category}}</span>
+  </div>
   </div>
   
 </main>

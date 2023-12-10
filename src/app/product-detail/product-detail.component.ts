@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../products.service';
+
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
-  styleUrl: './product-detail.component.css',
+  styleUrls: ['./product-detail.component.css'],
 })
 export class ProductDetailComponent implements OnInit {
   productId: number | undefined;
@@ -12,7 +14,8 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private ProductService: ProductService
+    private productService: ProductService,
+    private location: Location
   ) {}
 
   ngOnInit() {
@@ -20,10 +23,14 @@ export class ProductDetailComponent implements OnInit {
       const productIdParam = params.get('id');
       if (productIdParam !== null) {
         this.productId = +productIdParam;
-        this.ProductService.getProductById(this.productId).subscribe((product) => {
+        this.productService.getProductById(this.productId).subscribe((product) => {
           this.product = product;
         });
       }
     });
+  }
+
+  goBack() {
+    this.location.back();
   }
 }
