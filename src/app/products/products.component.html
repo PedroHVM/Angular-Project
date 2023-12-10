@@ -2,17 +2,17 @@
   <div class="headerInfo">
     <h1><a href="/">FashionFusion</a></h1>
     <nav>
-      <button routerLink="/products">Catálogo</button>
-      <span>Masculino</span>
-      <span>Feminino</span>
-      <span>Infantil</span>
-      <span>Sale</span>
+      <button (click)="filterProducts('')">All products</button>
+      <button (click)="filterProducts('men\'s clothing')">men's clothing</button>
+      <button (click)="filterProducts('women\'s clothing')">women's clothing</button>
+      <button (click)="filterProducts('electronics')">Eletronics</button>
+      <button (click)="filterProducts('jewelery')">jewelery</button>
     </nav>
   </div>
 </header>
 
 <main>
-<div class="ContainerProduct" *ngFor="let product of products" >
+  <div class="ContainerProduct" *ngFor="let product of filteredProducts" >
     <h3>{{ product.title }}</h3>
     <p>{{ product.description | truncateDescription: 50 }}</p>
     <h2>{{ product.price | priceFormat }}</h2>

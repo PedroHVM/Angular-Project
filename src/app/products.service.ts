@@ -14,10 +14,13 @@ export class ProductService {
     return this.httpClient.get<any[]>(this.apiUrl);
   }
 
+  getProductById(productId: number): Observable<any> {
+    const apiUrl = `${this.apiUrl}/${productId}`;
+    return this.httpClient.get<any>(apiUrl);
+  }
 
-getProductById(productId: number): Observable<any> {
-  const apiUrl = `https://fakestoreapi.com/products/${productId}`;
-  return this.httpClient.get<any>(apiUrl);
-}
-
+  getProductsByCategory(category: string): Observable<any[]> {
+    const apiUrl = `${this.apiUrl}/category/${category}`;
+    return this.httpClient.get<any[]>(apiUrl);
+  }
 }
