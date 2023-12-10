@@ -12,6 +12,8 @@ export class ProductsComponent implements OnInit {
   filteredProducts: any[] = [];
   selectedCategory: string = '';
   isFilterDropdownOpen: boolean = false; 
+  pagedProducts: any[] = [];
+  p: number = 1;
 
   constructor(private productService: ProductService, private router: Router) {}
 
@@ -32,15 +34,22 @@ export class ProductsComponent implements OnInit {
 
   filterProducts(category: string) {
     this.selectedCategory = category;
-
+  
     if (category === '') {
       this.filteredProducts = [...this.products];
     } else {
       this.filteredProducts = this.products.filter(product => product.category === category);
     }
+    this.pagedProducts = [...this.filteredProducts];
+    this.p = 1;
+  
+    console.log('Current page:', this.p);
   }
+  
 
   toggleFilterDropdown() {
     this.isFilterDropdownOpen = !this.isFilterDropdownOpen;
   }
+
+  
 }

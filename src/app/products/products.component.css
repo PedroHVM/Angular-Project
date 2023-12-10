@@ -129,6 +129,15 @@ nav button:hover {
   color: #fff;
 }
 
+.paginationMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
 .filter-dropdown {
   display: none;
 }
